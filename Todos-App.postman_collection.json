@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "88e37430-5601-477c-a493-bede11e2e0ec",
+		"name": "Todos-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27387182"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ggsss@gmail.com\",\r\n    \"name\": \"Wishva\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/auth/sign-up",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Error state",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ggsss@gmail.com\",\r\n    \"name\": \"Wishva\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/sign-up",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"sign-up"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"BAD_REQUEST\",\n    \"message\": \"There is a user with the same email!\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gg101@gmail.com\",\r\n    \"name\": \"Wishva\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/sign-up",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"sign-up"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"gg101@gmail.com\",\n    \"name\": \"Wishva\",\n    \"password\": \"123456\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gg@gsmail.com\",\r\n    \"password\": \"1234s56\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/auth/sign-in",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gg@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/sign-in",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"sign-in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isSuccess\": true\n}"
+						},
+						{
+							"name": "Not authenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gg@gmail.com\",\r\n    \"password\": \"1234s56\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/sign-in",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"sign-in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isSuccess\": false\n}"
+						},
+						{
+							"name": "Error state",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"gg@gsmail.com\",\r\n    \"password\": \"1234s56\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/sign-in",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"sign-in"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"BAD_REQUEST\",\n    \"message\": \"Invalid email!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "Get my todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/todos?email=gg@gmail.com",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "gg@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create todo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Bake the cake\",\r\n    \"userEmail\": \"gg@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/todos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Bake the cake\",\r\n    \"userEmail\": \"gg@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/todos",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"todos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isSuccess\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update todo status",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isCompleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/todos?id=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/todos?id=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Todo Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/todos?id=1",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"BAD_REQUEST\",\n    \"message\": \"Todo is not found!\"\n}"
+						},
+						{
+							"name": "Success delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/todos?id=2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "GlassFish Server Open Source Edition  5.1.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.1.0  Java/Oracle Corporation/1.8)"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
